@@ -1,0 +1,843 @@
+computer@computer-Veriton-M200-H610:~$ cd Desktop/
+computer@computer-Veriton-M200-H610:~/Desktop$ mkdir vibhav
+computer@computer-Veriton-M200-H610:~/Desktop$ cd vibhav/
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint: 
+hint: 	git config --global init.defaultBranch <name>
+hint: 
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint: 
+hint: 	git branch -m <name>
+Initialized empty Git repository in /home/computer/Desktop/vibhav/.git/
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git add origin main git@github.com:VIBHAV19/practiseFork.git
+fatal: pathspec 'origin' did not match any files
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git clone https://github.com/VIBHAV19/practiseFork.git
+Cloning into 'practiseFork'...
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 3 (from 1)
+Receiving objects: 100% (7/7), done.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote ad
+error: Unknown subcommand: ad
+usage: git remote [-v | --verbose]
+   or: git remote add [-t <branch>] [-m <master>] [-f] [--tags | --no-tags] [--mirror=<fetch|push>] <name> <url>
+   or: git remote rename <old> <new>
+   or: git remote remove <name>
+   or: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+   or: git remote [-v | --verbose] show [-n] <name>
+   or: git remote prune [-n | --dry-run] <name>
+   or: git remote [-v | --verbose] update [-p | --prune] [(<group> | <remote>)...]
+   or: git remote set-branches [--add] <name> <branch>...
+   or: git remote get-url [--push] [--all] <name>
+   or: git remote set-url [--push] <name> <newurl> [<oldurl>]
+   or: git remote set-url --add <name> <newurl>
+   or: git remote set-url --delete <name> <url>
+
+    -v, --verbose         be verbose; must be placed before a subcommand
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote add
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push
+fatal: No configured push destination.
+Either specify the URL from the command-line or configure a remote repository using
+
+    git remote add <name> <url>
+
+and then push using the remote name
+
+    git push <name>
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote add git@github.com:VIBHAV19/practiseFork.git
+usage: git remote add [<options>] <name> <url>
+
+    -f, --fetch           fetch the remote branches
+    --tags                import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --track <branch>  branch(es) to track
+    -m, --master <branch>
+                          master branch
+    --mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote add origin git@github.com:VIBHAV19/practiseFork.git
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git add 
+Nothing specified, nothing added.
+hint: Maybe you wanted to say 'git add .'?
+hint: Turn this message off by running
+hint: "git config advice.addEmptyPathspec false"
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git add .
+warning: adding embedded git repository: practiseFork
+hint: You've added another git repository inside your current repository.
+hint: Clones of the outer repository will not contain the contents of
+hint: the embedded repository and will not know how to obtain it.
+hint: If you meant to add a submodule, use:
+hint: 
+hint: 	git submodule add <url> practiseFork
+hint: 
+hint: If you added this path by mistake, you can remove it from the
+hint: index with:
+hint: 
+hint: 	git rm --cached practiseFork
+hint: 
+hint: See "git help submodule" for more information.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   practiseFork
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+  (commit or discard the untracked or modified content in submodules)
+	modified:   practiseFork (modified content)
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ cd practiseFork/
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ git add .
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ git commit -m "added file change"
+[master d3ead6c] added file change
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ git push -u origin main
+error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/VIBHAV19/practiseFork.git'
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ git branch
+* master
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ git push -u origin master
+Username for 'https://github.com': VIBHAV19
+Password for 'https://VIBHAV19@github.com': 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for 'https://github.com/VIBHAV19/practiseFork.git/'
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ cd .. ^Ch-keygen -t ed25519 -C "vpissurlenkar23@gmail.com"
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/practiseFork$ cd ..
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ cd 
+computer@computer-Veriton-M200-H610:~$ cd vibhav
+bash: cd: vibhav: No such file or directory
+computer@computer-Veriton-M200-H610:~$ cd Desktop/vibhav
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ mkdir ssh
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ cd ssh
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ ssh-keygen -t rsa -b 4096 -C "vpissurlenkar23@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/computer/.ssh/id_rsa): keyfile
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in keyfile
+Your public key has been saved in keyfile.pub
+The key fingerprint is:
+SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 vpissurlenkar23@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|                 |
+|                 |
+|        .        |
+|    .o o .       |
+| . . .= S        |
+|o o .  = +.      |
+|.o   o= *....    |
+|.o.oBo+O.+ +o    |
+|o .*=X&B+.+E..   |
++----[SHA256]-----+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ cat keyfile.pub 
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQC704aUpnCi1KhwIjFbV5+yuYttbgog+/4PZs2tcsC5DqN9Gfwd+Q+/SgTlNLggvYXsgyfLrGBJhut1s7TGIkeVYT4QXP+k1IrZucPU7S5tJKZOLnrZSoVwKvyfQ10fMu/rArk81CNnBBlMTNozQCc0kGA+6N980KraECVhRsHi+COlpf+8JoJjtvnBdq6aaWEKeWWO8bqGScS9Sb+imRBDBirckox8gbQKMRphtRPCpF1gz/bjkenCF2x9y+DBM+Idu3AN724gU93ab7krb2LM3Hk2PBfLeSnysIdya0ALO4PVt96iYwnuU5x9hWet5dIjS+X0kXCR7O3I3sSIXpOnWhtr5XprcYkC+NI3J+JwQGK9eNw3rZpotz9T+Tk0OooCvMwDwXvizHUSwKII19Iv92gB7dz9cB/n3TIHQ89OP8iLBqAotHNP1JEveSoTe7/V45xCod3Ho5nHwXfsX1yctgti/UvOvP3ZKWwB5YAApKX0UAu/Bajg39rQsjdU6sTNMMoEg7MZ55q5Vsf4RLn1dO7wl+ONu0X5j3dz5b1ewKeRTvAj4V9j8LSDA5Wv16MSG79nNFwhWymspqBZrgY/RwDFLDIUncHJhRn4BWduQ2ecJgTTWeACAcXEnFjes6YkUZu+Y+QsJgeojLyTbprsrEGQhK1bBa1/MrP7ox2OFQ== vpissurlenkar23@gmail.com
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ ^C
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ git push -u origin master
+error: src refspec master does not match any
+error: failed to push some refs to 'github.com:VIBHAV19/practiseFork.git'
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   ../practiseFork
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   ../practiseFork (new commits)
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	./
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ git add .
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ git commit -m "new ssh stuff"
+[master (root-commit) a4a5aca] new ssh stuff
+ 3 files changed, 52 insertions(+)
+ create mode 160000 practiseFork
+ create mode 100644 ssh/keyfile
+ create mode 100644 ssh/keyfile.pub
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ ssh -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file /home/computer/.ssh/id_rsa type -1
+debug1: identity file /home/computer/.ssh/id_rsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519 type -1
+debug1: identity file /home/computer/.ssh/id_ed25519-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_xmss type -1
+debug1: identity file /home/computer/.ssh/id_xmss-cert type -1
+debug1: identity file /home/computer/.ssh/id_dsa type -1
+debug1: identity file /home/computer/.ssh/id_dsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: /home/computer/.ssh/id_rsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_xmss 
+debug1: Will attempt key: /home/computer/.ssh/id_dsa 
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /home/computer/.ssh/id_rsa
+debug1: Trying private key: /home/computer/.ssh/id_ecdsa
+debug1: Trying private key: /home/computer/.ssh/id_ecdsa_sk
+debug1: Trying private key: /home/computer/.ssh/id_ed25519
+debug1: Trying private key: /home/computer/.ssh/id_ed25519_sk
+debug1: Trying private key: /home/computer/.ssh/id_xmss
+debug1: Trying private key: /home/computer/.ssh/id_dsa
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ ^C
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ cd /home/computer/.ssh/~
+bash: cd: /home/computer/.ssh/~: No such file or directory
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav/ssh$ cd ..
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ cd ..
+computer@computer-Veriton-M200-H610:~/Desktop$ cd ..
+computer@computer-Veriton-M200-H610:~$ cd computer/.ssh/~
+bash: cd: computer/.ssh/~: No such file or directory
+computer@computer-Veriton-M200-H610:~$ git push -u origin master
+fatal: not a git repository (or any of the parent directories): .git
+computer@computer-Veriton-M200-H610:~$ git status
+fatal: not a git repository (or any of the parent directories): .git
+computer@computer-Veriton-M200-H610:~$ cd Desktop/vibhav
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file /home/computer/.ssh/id_rsa type -1
+debug1: identity file /home/computer/.ssh/id_rsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519 type -1
+debug1: identity file /home/computer/.ssh/id_ed25519-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_xmss type -1
+debug1: identity file /home/computer/.ssh/id_xmss-cert type -1
+debug1: identity file /home/computer/.ssh/id_dsa type -1
+debug1: identity file /home/computer/.ssh/id_dsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: /home/computer/.ssh/id_rsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_xmss 
+debug1: Will attempt key: /home/computer/.ssh/id_dsa 
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /home/computer/.ssh/id_rsa
+debug1: Trying private key: /home/computer/.ssh/id_ecdsa
+debug1: Trying private key: /home/computer/.ssh/id_ecdsa_sk
+debug1: Trying private key: /home/computer/.ssh/id_ed25519
+debug1: Trying private key: /home/computer/.ssh/id_ed25519_sk
+debug1: Trying private key: /home/computer/.ssh/id_xmss
+debug1: Trying private key: /home/computer/.ssh/id_dsa
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ^C
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -i ../../ssh/keyfile.pub -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file ../../ssh/keyfile.pub type 0
+debug1: identity file ../../ssh/keyfile.pub-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+debug1: Server accepts key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+@         WARNING: UNPROTECTED PRIVATE KEY FILE!          @
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+Permissions 0644 for '../../ssh/keyfile.pub' are too open.
+It is required that your private key files are NOT accessible by others.
+This private key will be ignored.
+Load key "../../ssh/keyfile.pub": bad permissions
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ chmod 400 ../../ssh/keyfile.pub
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -i ../../ssh/keyfile.pub -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file ../../ssh/keyfile.pub type 0
+debug1: identity file ../../ssh/keyfile.pub-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+debug1: Server accepts key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+Load key "../../ssh/keyfile.pub": error in libcrypto
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+git@github.com: Permission denied (publickey).
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ sh -T GITHUB-VIBHAV19@github.com
+sh: 0: Illegal option -T
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -T GITHUB-VIBHAV19@github.com
+GITHUB-VIBHAV19@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote add origin https://github.com/VIBHAV19/practiseFork.git
+error: remote origin already exists.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote add origin1 https://github.com/VIBHAV19/practiseFork.git
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git remote -v
+origin	git@github.com:VIBHAV19/practiseFork.git (fetch)
+origin	git@github.com:VIBHAV19/practiseFork.git (push)
+origin1	https://github.com/VIBHAV19/practiseFork.git (fetch)
+origin1	https://github.com/VIBHAV19/practiseFork.git (push)
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -T git@github.com
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file /home/computer/.ssh/id_rsa type -1
+debug1: identity file /home/computer/.ssh/id_rsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519 type -1
+debug1: identity file /home/computer/.ssh/id_ed25519-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_xmss type -1
+debug1: identity file /home/computer/.ssh/id_xmss-cert type -1
+debug1: identity file /home/computer/.ssh/id_dsa type -1
+debug1: identity file /home/computer/.ssh/id_dsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: /home/computer/.ssh/id_rsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_xmss 
+debug1: Will attempt key: /home/computer/.ssh/id_dsa 
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Trying private key: /home/computer/.ssh/id_rsa
+debug1: Trying private key: /home/computer/.ssh/id_ecdsa
+debug1: Trying private key: /home/computer/.ssh/id_ecdsa_sk
+debug1: Trying private key: /home/computer/.ssh/id_ed25519
+debug1: Trying private key: /home/computer/.ssh/id_ed25519_sk
+debug1: Trying private key: /home/computer/.ssh/id_xmss
+debug1: Trying private key: /home/computer/.ssh/id_dsa
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -i ../../ssh/keyfile.pub -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file ../../ssh/keyfile.pub type 0
+debug1: identity file ../../ssh/keyfile.pub-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: ssh_fetch_identitylist: agent contains no identities
+debug1: Will attempt key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+debug1: Server accepts key: ../../ssh/keyfile.pub RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 explicit
+Load key "../../ssh/keyfile.pub": error in libcrypto
+debug1: No more authentication methods to try.
+git@github.com: Permission denied (publickey).
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ chmod 600 ../../ssh/keyfile
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh-add ../../ssh/keyfile
+Enter passphrase for ../../ssh/keyfile: 
+Identity added: ../../ssh/keyfile (vpissurlenkar23@gmail.com)
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ssh -vT git@github.com
+OpenSSH_8.9p1 Ubuntu-3ubuntu0.10, OpenSSL 3.0.2 15 Mar 2022
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: /etc/ssh/ssh_config line 19: include /etc/ssh/ssh_config.d/*.conf matched no files
+debug1: /etc/ssh/ssh_config line 21: Applying options for *
+debug1: Connecting to github.com [20.207.73.82] port 22.
+debug1: Connection established.
+debug1: identity file /home/computer/.ssh/id_rsa type -1
+debug1: identity file /home/computer/.ssh/id_rsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa-cert type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk type -1
+debug1: identity file /home/computer/.ssh/id_ecdsa_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519 type -1
+debug1: identity file /home/computer/.ssh/id_ed25519-cert type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk type -1
+debug1: identity file /home/computer/.ssh/id_ed25519_sk-cert type -1
+debug1: identity file /home/computer/.ssh/id_xmss type -1
+debug1: identity file /home/computer/.ssh/id_xmss-cert type -1
+debug1: identity file /home/computer/.ssh/id_dsa type -1
+debug1: identity file /home/computer/.ssh/id_dsa-cert type -1
+debug1: Local version string SSH-2.0-OpenSSH_8.9p1 Ubuntu-3ubuntu0.10
+debug1: Remote protocol version 2.0, remote software version babeld-29dce086b
+debug1: compat_banner: no match: babeld-29dce086b
+debug1: Authenticating to github.com:22 as 'git'
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: SSH2_MSG_KEXINIT sent
+debug1: SSH2_MSG_KEXINIT received
+debug1: kex: algorithm: curve25519-sha256
+debug1: kex: host key algorithm: ssh-ed25519
+debug1: kex: server->client cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: kex: client->server cipher: chacha20-poly1305@openssh.com MAC: <implicit> compression: none
+debug1: expecting SSH2_MSG_KEX_ECDH_REPLY
+debug1: SSH2_MSG_KEX_ECDH_REPLY received
+debug1: Server host key: ssh-ed25519 SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU
+debug1: load_hostkeys: fopen /home/computer/.ssh/known_hosts2: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts: No such file or directory
+debug1: load_hostkeys: fopen /etc/ssh/ssh_known_hosts2: No such file or directory
+debug1: Host 'github.com' is known and matches the ED25519 host key.
+debug1: Found key in /home/computer/.ssh/known_hosts:1
+debug1: ssh_packet_send2_wrapped: resetting send seqnr 3
+debug1: rekey out after 134217728 blocks
+debug1: SSH2_MSG_NEWKEYS sent
+debug1: expecting SSH2_MSG_NEWKEYS
+debug1: ssh_packet_read_poll2: resetting read seqnr 3
+debug1: SSH2_MSG_NEWKEYS received
+debug1: rekey in after 134217728 blocks
+debug1: get_agent_identities: bound agent to hostkey
+debug1: get_agent_identities: agent returned 1 keys
+debug1: Will attempt key: vpissurlenkar23@gmail.com RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 agent
+debug1: Will attempt key: /home/computer/.ssh/id_rsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa 
+debug1: Will attempt key: /home/computer/.ssh/id_ecdsa_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519 
+debug1: Will attempt key: /home/computer/.ssh/id_ed25519_sk 
+debug1: Will attempt key: /home/computer/.ssh/id_xmss 
+debug1: Will attempt key: /home/computer/.ssh/id_dsa 
+debug1: SSH2_MSG_EXT_INFO received
+debug1: kex_input_ext_info: server-sig-algs=<ssh-ed25519-cert-v01@openssh.com,ecdsa-sha2-nistp521-cert-v01@openssh.com,ecdsa-sha2-nistp384-cert-v01@openssh.com,ecdsa-sha2-nistp256-cert-v01@openssh.com,sk-ssh-ed25519-cert-v01@openssh.com,sk-ecdsa-sha2-nistp256-cert-v01@openssh.com,rsa-sha2-512-cert-v01@openssh.com,rsa-sha2-256-cert-v01@openssh.com,ssh-rsa-cert-v01@openssh.com,sk-ssh-ed25519@openssh.com,sk-ecdsa-sha2-nistp256@openssh.com,ssh-ed25519,ecdsa-sha2-nistp521,ecdsa-sha2-nistp384,ecdsa-sha2-nistp256,rsa-sha2-512,rsa-sha2-256,ssh-rsa>
+debug1: SSH2_MSG_SERVICE_ACCEPT received
+debug1: Authentications that can continue: publickey
+debug1: Next authentication method: publickey
+debug1: Offering public key: vpissurlenkar23@gmail.com RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 agent
+debug1: Server accepts key: vpissurlenkar23@gmail.com RSA SHA256:G+EanLzpi4gJHF7tOq+cjf16XJr6dj9pqPA/qJzn1Y8 agent
+Authenticated to github.com ([20.207.73.82]:22) using "publickey".
+debug1: channel 0: new [client-session]
+debug1: Entering interactive session.
+debug1: pledge: filesystem
+debug1: client_input_global_request: rtype hostkeys-00@openssh.com want_reply 0
+debug1: client_input_hostkeys: searching /home/computer/.ssh/known_hosts for github.com / (none)
+debug1: client_input_hostkeys: searching /home/computer/.ssh/known_hosts2 for github.com / (none)
+debug1: client_input_hostkeys: hostkeys file /home/computer/.ssh/known_hosts2 does not exist
+debug1: Sending environment.
+debug1: channel 0: setting env LANG = "en_IN"
+Learned new hostkey: RSA SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s
+Learned new hostkey: ECDSA SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM
+Adding new key for github.com to /home/computer/.ssh/known_hosts: ssh-rsa SHA256:uNiVztksCsDhcc0u9e8BujQXVUpKZIDTMczCvj3tD2s
+Adding new key for github.com to /home/computer/.ssh/known_hosts: ecdsa-sha2-nistp256 SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM
+debug1: update_known_hosts: known hosts file /home/computer/.ssh/known_hosts2 does not exist
+debug1: client_input_channel_req: channel 0 rtype exit-status reply 0
+Hi VIBHAV19! You've successfully authenticated, but GitHub does not provide shell access.
+debug1: channel 0: free: client-session, nchannels 1
+Transferred: sent 4152, received 3632 bytes, in 0.6 seconds
+Bytes per second: sent 6758.4, received 5912.0
+debug1: Exit status 1
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+To github.com:VIBHAV19/practiseFork.git
+ ! [rejected]        master -> master (fetch first)
+error: failed to push some refs to 'github.com:VIBHAV19/practiseFork.git'
+hint: Updates were rejected because the remote contains work that you do
+hint: not have locally. This is usually caused by another repository pushing
+hint: to the same ref. You may want to first integrate the remote changes
+hint: (e.g., 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git pull
+remote: Enumerating objects: 7, done.
+remote: Counting objects: 100% (4/4), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 7 (delta 0), reused 0 (delta 0), pack-reused 3 (from 1)
+Unpacking objects: 100% (7/7), 2.30 KiB | 2.30 MiB/s, done.
+From github.com:VIBHAV19/practiseFork
+ * [new branch]      master     -> origin/master
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+To github.com:VIBHAV19/practiseFork.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:VIBHAV19/practiseFork.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   practiseFork (new commits)
+	deleted:    ssh/keyfile
+	deleted:    ssh/keyfile.pub
+
+no changes added to commit (use "git add" and/or "git commit -a")
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git add .
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git commit -m "changes done"
+[master 08c2e5b] changes done
+ 3 files changed, 1 insertion(+), 52 deletions(-)
+ delete mode 100644 ssh/keyfile
+ delete mode 100644 ssh/keyfile.pub
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+To github.com:VIBHAV19/practiseFork.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:VIBHAV19/practiseFork.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ ^C
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git pull
+There is no tracking information for the current branch.
+Please specify which branch you want to merge with.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=<remote>/<branch> master
+
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git pull remote master
+fatal: 'remote' does not appear to be a git repository
+fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git pull  git@github.com:VIBHAV19/practiseFork.git
+From github.com:VIBHAV19/practiseFork
+ * branch            HEAD       -> FETCH_HEAD
+hint: You have divergent branches and need to specify how to reconcile them.
+hint: You can do so by running one of the following commands sometime before
+hint: your next pull:
+hint: 
+hint:   git config pull.rebase false  # merge (the default strategy)
+hint:   git config pull.rebase true   # rebase
+hint:   git config pull.ff only       # fast-forward only
+hint: 
+hint: You can replace "git config" with "git config --global" to set a default
+hint: preference for all repositories. You can also pass --rebase, --no-rebase,
+hint: or --ff-only on the command line to override the configured default per
+hint: invocation.
+fatal: Need to specify how to reconcile divergent branches.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+To github.com:VIBHAV19/practiseFork.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:VIBHAV19/practiseFork.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git fetch origin
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git merge origin/master
+fatal: refusing to merge unrelated histories
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git merge origi
+merge: origi - not something we can merge
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git merge origin
+merge: origin - not something we can merge
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git status
+On branch master
+nothing to commit, working tree clean
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+To github.com:VIBHAV19/practiseFork.git
+ ! [rejected]        master -> master (non-fast-forward)
+error: failed to push some refs to 'github.com:VIBHAV19/practiseFork.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git branch
+* master
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git merge origin/master
+fatal: refusing to merge unrelated histories
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git fetch origin
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git merge origin/master --allow-unrelated-histories
+Merge made by the 'ort' strategy.
+ test | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git status
+On branch master
+nothing to commit, working tree clean
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git push -u origin master
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (8/8), done.
+Writing objects: 100% (9/9), 3.43 KiB | 3.43 MiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+To github.com:VIBHAV19/practiseFork.git
+   1924484..cfdf329  master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+computer@computer-Veriton-M200-H610:~/Desktop/vibhav$ git branch
+* master
